@@ -14,6 +14,7 @@
     <Compile Include="..\FsAutoComplete\Debug.fs" />
     <Compile Include="..\FsAutoComplete\Options.fs" />
     <Compile Include="..\FsAutoComplete\CommandInput.fs" />
+    <Compile Include="..\FsAutoComplete\CommandResponse.fs" />
     <Compile Include="..\FsAutoComplete\JsonSerializer.fs" />
     <Compile Include="..\FsAutoComplete\FsAutoComplete.Stdio.fs" />
     <Compile Include="..\FsAutoComplete\FsAutoComplete.HttpApiContract.fs" />
