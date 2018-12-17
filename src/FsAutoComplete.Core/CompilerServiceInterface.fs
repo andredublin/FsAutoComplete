@@ -353,13 +353,14 @@ type ParseAndCheckResults
       let! results = checkResults.GetDeclarationListInfo(Some parseResults, pos.Line, lineStr, longName, getAllSymbols)
 
       let getKindPriority = function
+        | CompletionItemKind.CustomOperation -> -1
         | CompletionItemKind.Property -> 0
         | CompletionItemKind.Field -> 1
         | CompletionItemKind.Method (isExtension = false) -> 2
         | CompletionItemKind.Event -> 3
         | CompletionItemKind.Argument -> 4
         | CompletionItemKind.Other -> 5
-        | CompletionItemKind.Method (isExtension = true) -> 6
+        | CompletionItemKind.Method (_) -> 6
 
       let sortedDeclItems =
           results.Items
