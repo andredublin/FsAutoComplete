@@ -5,8 +5,6 @@ NUGET
     Dapper (1.50.5)
     Dotnet.ProjInfo (0.11)
       FSharp.Core (>= 4.0.0.1)
-    FParsec (1.0.3)
-      FSharp.Core (>= 4.0.0.1)
     FSharp.Analyzers.SDK (0.0.1)
       FSharp.Compiler.Service (>= 25.0 < 26.0)
       FSharp.Core (>= 4.5 < 5.0)
@@ -20,10 +18,7 @@ NUGET
       FSharp.Core (>= 4.1.18)
       System.ValueTuple (>= 4.4)
     FSharp.Core (4.5.2) - redirects: force
-    FSharpLint.Core (0.9.0-beta)
-      FParsec (>= 1.0.3)
-      FSharp.Compiler.Service (>= 14.0.2)
-      FSharp.Compiler.Service.ProjectCracker (>= 14.0.2)
+    FSharpLint.Core (0.10.1)
     Humanizer.Core (2.5.1)
       NETStandard.Library (>= 1.6.1)
     ICSharpCode.Decompiler (3.2.0.3856)
@@ -99,7 +94,7 @@ NUGET
     Dotnet.ProjInfo (0.11)
       FSharp.Core (>= 4.0.0.1) - restriction: >= net45
       FSharp.Core (>= 4.1.18) - restriction: && (< net45) (>= netstandard2.0)
-    FParsec (1.0.3)
+    FParsec (1.0.3) - restriction: >= netstandard2.0
       FSharp.Core (>= 4.0.0.1) - restriction: >= net40
       FSharp.Core (>= 4.2.3) - restriction: && (< net40) (>= netstandard1.6)
       NETStandard.Library (>= 1.6.1) - restriction: && (< net40) (>= netstandard1.6)
@@ -116,10 +111,6 @@ NUGET
       System.Reflection.TypeExtensions (>= 4.3) - restriction: && (< net45) (>= netstandard2.0)
       System.Runtime.Loader (>= 4.0) - restriction: && (< net45) (>= netstandard2.0)
       System.Security.Cryptography.Algorithms (>= 4.3) - restriction: && (< net45) (>= netstandard2.0)
-      System.ValueTuple (>= 4.4) - restriction: >= net45
-    FSharp.Compiler.Service.ProjectCracker (25.0.1) - restriction: < netstandard2.0
-      FSharp.Compiler.Service (>= 25.0.1) - restriction: >= net45
-      FSharp.Core (>= 4.1.18) - restriction: >= net45
       System.ValueTuple (>= 4.4) - restriction: >= net45
     FSharp.Core (4.5.2)
       System.Collections (>= 4.0.11) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
@@ -145,11 +136,11 @@ NUGET
       System.Threading.Thread (>= 4.0) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
       System.Threading.ThreadPool (>= 4.0.10) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
       System.Threading.Timer (>= 4.0.1) - restriction: && (< net45) (>= netstandard1.6) (< netstandard2.0)
-    FSharpLint.Core (0.9.0-beta)
-      FParsec (>= 1.0.3)
-      FSharp.Compiler.Service (>= 14.0.2) - restriction: < netstandard2.0
-      FSharp.Compiler.Service (>= 16.0.2) - restriction: >= netstandard2.0
-      FSharp.Compiler.Service.ProjectCracker (>= 14.0.2) - restriction: < netstandard2.0
+    FSharpLint.Core (0.10.1)
+      Dotnet.ProjInfo (>= 0.9) - restriction: >= netstandard2.0
+      FParsec (>= 1.0.3) - restriction: >= netstandard2.0
+      FSharp.Compiler.Service (>= 25.0.1) - restriction: >= netstandard2.0
+      FSharp.Core (>= 4.3.4) - restriction: >= netstandard2.0
     Humanizer.Core (2.5.1)
       NETStandard.Library (>= 1.6.1) - restriction: && (>= netstandard1.0) (< netstandard2.0)
     ICSharpCode.Decompiler (3.2.0.3856)
@@ -186,7 +177,7 @@ NUGET
       System.Security.Cryptography.Algorithms (>= 4.2) - restriction: && (< net35) (>= netstandard1.3)
       System.Security.Cryptography.Csp (>= 4.0) - restriction: && (< net35) (>= netstandard1.3)
       System.Threading (>= 4.0.11) - restriction: && (< net35) (>= netstandard1.3)
-    NETStandard.Library (2.0.3) - restriction: || (&& (< monoandroid) (< net35) (< netcoreapp1.0) (>= netstandard2.0) (< win8) (< wpa81) (< xamarinios)) (&& (< monoandroid) (< net35) (>= netstandard2.0) (< win81) (< wpa81) (< xamarinios)) (&& (< monoandroid) (< net451) (< netstandard1.3) (>= netstandard2.0) (< win81) (< wpa81)) (&& (< net20) (>= netstandard1.0) (< netstandard1.3)) (&& (< net20) (>= netstandard1.0) (< portable-net45+win8+wp8+wpa81)) (&& (< net20) (>= netstandard1.3) (< netstandard2.0)) (&& (< net20) (>= netstandard1.3) (< portable-net45+win8+wp8+wpa81)) (&& (< net451) (>= netstandard1.3) (< netstandard2.0)) (&& (>= netcoreapp1.0) (>= netstandard2.0)) (&& (>= netstandard1.0) (< netstandard2.0)) (>= netstandard1.6) (&& (>= netstandard2.0) (>= uap10.0))
+    NETStandard.Library (2.0.3) - restriction: || (&& (< monoandroid) (< net35) (< netcoreapp1.0) (>= netstandard2.0) (< win8) (< wpa81) (< xamarinios)) (&& (< monoandroid) (< net35) (>= netstandard2.0) (< win81) (< wpa81) (< xamarinios)) (&& (< monoandroid) (< net451) (< netstandard1.3) (>= netstandard2.0) (< win81) (< wpa81)) (&& (< net20) (>= netstandard1.0) (< netstandard1.3)) (&& (< net20) (>= netstandard1.0) (< portable-net45+win8+wp8+wpa81)) (&& (< net20) (>= netstandard1.3) (< netstandard2.0)) (&& (< net20) (>= netstandard1.3) (< portable-net45+win8+wp8+wpa81)) (&& (< net40) (>= netstandard2.0)) (&& (< net451) (>= netstandard1.3) (< netstandard2.0)) (&& (>= netcoreapp1.0) (>= netstandard2.0)) (&& (>= netstandard1.0) (< netstandard2.0)) (>= netstandard1.6) (&& (>= netstandard2.0) (>= uap10.0))
       Microsoft.NETCore.Platforms (>= 1.1) - restriction: || (&& (>= net45) (< netstandard1.3)) (&& (< net45) (>= netstandard1.1) (< netstandard1.2) (< win8)) (&& (< net45) (>= netstandard1.2) (< netstandard1.3) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.3) (< netstandard1.4) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.4) (< netstandard1.5) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.5) (< netstandard1.6) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.6) (< netstandard2.0) (< win8) (< wpa81)) (&& (< net45) (>= netstandard2.0)) (&& (>= net46) (< netstandard1.4)) (>= net461) (>= netcoreapp2.0) (&& (>= netstandard1.0) (< portable-net45+win8+wpa81)) (&& (< netstandard1.0) (>= portable-net45+win8) (< win8)) (&& (< netstandard1.0) (< portable-net45+win8) (>= portable-net45+win8+wpa81)) (&& (< netstandard1.0) (>= portable-net45+win8+wp8+wpa81) (< portable-net45+win8+wpa81)) (&& (< netstandard1.0) (>= win8)) (&& (< netstandard1.3) (< win8) (>= wpa81)) (&& (< netstandard1.5) (>= uap10.0)) (>= uap10.1) (>= wp8)
       Microsoft.Win32.Primitives (>= 4.3) - restriction: || (&& (< net45) (>= netstandard1.3) (< netstandard1.4) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.4) (< netstandard1.5) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.5) (< netstandard1.6) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.6) (< netstandard2.0) (< win8) (< wpa81)) (&& (>= net46) (< netstandard1.4)) (&& (< netstandard1.5) (>= uap10.0) (< uap10.1))
       System.AppContext (>= 4.3) - restriction: || (&& (< net45) (>= netstandard1.3) (< netstandard1.4) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.4) (< netstandard1.5) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.5) (< netstandard1.6) (< win8) (< wpa81)) (&& (< net45) (>= netstandard1.6) (< netstandard2.0) (< win8) (< wpa81)) (&& (>= net46) (< netstandard1.4)) (&& (< netstandard1.5) (>= uap10.0) (< uap10.1))
